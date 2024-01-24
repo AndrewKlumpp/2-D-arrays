@@ -1,5 +1,13 @@
-// your code here
-
+function twoDimensionalSum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    let subArray = arr[i];
+    for (let j = 0; j < subArray.length; j++) {
+      sum = sum + subArray[j];
+    }
+  }
+  return sum;
+};
 
 
 let arr1 = [
