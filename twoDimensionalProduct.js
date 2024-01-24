@@ -1,6 +1,14 @@
-// your code here
-
-
+function twoDimensionalProduct(arr) {
+  let product = 1;
+  for (let i = 0; i < arr.length; i++) {
+    let subArray = arr[i];
+    for (let j = 0; j < subArray.length; j++) {
+      num = subArray[j];
+      product = product * num;
+    }
+  }
+  return product;
+};
 
 
 
