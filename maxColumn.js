@@ -1,6 +1,17 @@
 function maxColumn(matrix) {
-  // your code here...
-}
+  let returnArray = [];
+
+  for (let i = 0; i < matrix[0].length; i++) {
+    let colMax = matrix[0][i]
+    for (let j = 1; j < matrix.length; j++) {
+      if (matrix[j][i] > colMax) {
+        colMax = matrix[j][i];
+      }
+    }
+    returnArray.push(colMax);
+  }
+  return returnArray;
+};
 
 
 matrix = [[ 5,  9, 21],
