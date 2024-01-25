@@ -1,5 +1,13 @@
 function matrixAddition(matrix1, matrix2) {
-
+  let summed = [];
+  for (let i = 0; i < matrix1.length; i++) {
+    let subArray = [];
+    for (let j = 0;j < matrix1[0].length; j++) {
+      subArray.push(matrix1[i][j] + matrix2[i][j])
+    }
+    summed.push(subArray);
+  }
+  return summed;
 };
 
 
