@@ -1,14 +1,19 @@
-function pyramidArray(base) {
-  let pyramid = [];
-  pyramid.push(base);
-
-    let currentLevel = [];
-    for (let i = 0; i < pyramid[pyramid.length - 1].length - 1; i++) {
-      currentLevel.push(pyramid[0][i] + pyramid[0][i + 1]);
-    }
-    pyramid.unshift(currentLevel);
-
+let pyramidArray = function(base) {
+  let pyramid = [base];
+  while (pyramid.length < base.length) {
+    let next = adjacentSums(pyramid[0]);
+    pyramid.unshift(next);
+  }
   return pyramid;
+};
+
+let adjacentSums = function(arr) {
+  let sums = [];
+  for (let i = 0; i < arr.length - 1; i++) {
+    let sum = arr[i] + arr[i + 1];
+    sums.push(sum);
+  }
+  return sums;
 };
 
 
